@@ -2,8 +2,12 @@ defmodule Controllers.Transaction do
   alias Transaction
 
   def transaction(sender, reciever, value) do
-    transaction = %Transaction{id: generate_id(), sender: sender, receiver: reciever, value: value}
-    |> handle_transaction()
+    %Transaction{
+      id: generate_id(),
+      sender: sender,
+      receiver: reciever,
+      value: value
+    } |> handle_transaction()
   end
 
   defp handle_transaction(transaction) do

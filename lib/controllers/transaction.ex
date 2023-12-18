@@ -10,6 +10,7 @@ defmodule Controllers.Transaction do
     {:ok, sender} = transaction.sender
     {:ok, reciever} = transaction.receiver
     value = transaction.value
+
     %{
       transaction: transaction,
       new_accounts: {

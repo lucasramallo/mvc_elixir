@@ -7,7 +7,6 @@ defmodule User_controller do
     {:ok, user}
   end
 
-
   defp generate_id do
     Enum.join(for _ <- 1..5, do: Integer.to_string(:rand.uniform(10)))
   end
